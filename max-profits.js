@@ -27,8 +27,6 @@ function maxProfits(arr){
   var left =  maxProfits(arr.slice(0, maxIndex +1 )); //0
   var right = maxProfits(arr.slice(minIndex));
 
-  debugger;
-
   var mid = maxProfits(arr.slice(maxIndex + 1, minIndex));
 
   return Math.max.apply(null, [left, right, mid]);
